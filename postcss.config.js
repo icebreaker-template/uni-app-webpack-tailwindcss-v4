@@ -3,6 +3,7 @@ const webpack = require('webpack')
 const config = {
   parser: require('postcss-comment'),
   plugins: [
+    require('@tailwindcss/postcss')(),
     require('postcss-import')({
       resolve (id, basedir, importOptions) {
         if (id.startsWith('~@/')) {
@@ -15,6 +16,7 @@ const config = {
         return id
       }
     }),
+
     require('autoprefixer')({
       remove: process.env.UNI_PLATFORM !== 'h5'
     }),
