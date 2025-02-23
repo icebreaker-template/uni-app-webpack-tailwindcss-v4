@@ -2,7 +2,7 @@
 	<view class="content">
 		<image class="bg-[#123456]" src="../../static/logo.png"></image>
 		<view>
-			<text :class="className">{{ title }}</text>
+			<view :class="className" class="h-21">{{ title }}</view>
 		</view>
 	</view>
 </template>
